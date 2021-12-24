@@ -18,20 +18,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::get('/test', function() {
     return response()->json([
-        'status' => 'success',
-        'message' => 'Berhasil mengambil data',
-        'data' => [
-            'user' => $request->user()
-        ]
-    ], 200);
-});
-
-Route::get('/data', function() {
-    return response()->json([
-        "name" => "Budiarta",
-        "email" => "budiarta5121@gmail.com"
+        "test" => "success"
     ], 200);
 });
 
